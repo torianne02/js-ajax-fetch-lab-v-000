@@ -1,5 +1,5 @@
 const baseURL = 'https://api.github.com';
-const user = 'torianne02';
+const user = '<YOUR_USERNAME>';
 
 function getToken() {
   //change to your token to run in browser, but set
@@ -53,5 +53,3 @@ function getIssues() {
   .then(res => res.json());
   .then(json => console.log(json));
 }
-
-// fbed3cac74745e55cdc9135c1a21da4b86e73996
