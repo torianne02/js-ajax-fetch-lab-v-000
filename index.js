@@ -43,7 +43,15 @@ function createIssue() {
 }
 
 function getIssues() {
-  //once an issue is submitted, fetch all open issues to see the issues you are creating
+  const repo = `${user}/js-ajax-fetch-lab`;
+  const url = `${baseURL}/repos/${repo}/issues`;
+  fetch(url, {
+    headers: {
+      Authorization: `token ${getToken()}`
+    }
+  })
+  .then(res => res.json());
+  .then(json => console.log(json));
 }
 
 // fbed3cac74745e55cdc9135c1a21da4b86e73996
